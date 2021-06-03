@@ -1,0 +1,32 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://kedro.readthedocs.io/en/stable/05_data/01_data_catalog.html
+
+query_log:
+  type: text.TextDataSet
+  filepath: data/01_raw/query.log
+
+ioc_qname:
+  type: text.TextDataSet
+  filepath: data/01_raw/iocs.txt
+
+query_dataframe:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/query_dataframe.csv
+
+summary_dataframe:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/summary_dataframe.csv
+
+unique_qname:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/unique_qname.csv
+
+suspicious_log:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/suspicious_log.csv
+
+discoverd_qname:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/discoverd_qname.csv
